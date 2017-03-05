@@ -1,9 +1,9 @@
 L.mapbox.accessToken = 'pk.eyJ1IjoibGFycnlzY2hpcm1lciIsImEiOiJjaXp2cnRtZzMwMWRzMzNtbXIwNzhoM3hvIn0.naKjJ_zeLB74jpMKbIBLSQ';
 
-var map = L.mapbox.map('map', 'mapbox.streets').setView([42.346611,-83.040639], 15);
+var map = L.mapbox.map('map', 'mapbox.streets').setView([42.346611,-83.040639], 14);
 
 
-    L.mapbox.featureLayer({
+    var marker0 = L.mapbox.featureLayer({
         // this feature is in the GeoJSON format: see geojson.org
         // for the full specification
         type: 'Feature',
@@ -12,11 +12,34 @@ var map = L.mapbox.map('map', 'mapbox.streets').setView([42.346611,-83.040639], 
             // coordinates here are in longitude, latitude order because
             // x, y is the standard for GeoJSON and many formats
             coordinates: [
-              -83.040639,42.346611
+              -83.04172134026885,42.34826963015377
             ]
         },
         properties: {
-            title: 'Peregrine Espresso',
+            title: 'Dec 12',
+            description: '1718 14th St NW, Washington, DC',
+            // one can customize markers by adding simplestyle properties
+            // https://www.mapbox.com/guides/an-open-platform/#simplestyle
+            'marker-size': 'large',
+            'marker-color': '#BE9A6B',
+            'marker-symbol': 'cafe'
+        }
+    }).addTo(map);
+
+    var marker1 = L.mapbox.featureLayer({
+        // this feature is in the GeoJSON format: see geojson.org
+        // for the full specification
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            // coordinates here are in longitude, latitude order because
+            // x, y is the standard for GeoJSON and many formats
+            coordinates: [
+              -83.04075574502349,42.3482379129665
+            ]
+        },
+        properties: {
+            title: 'May 17',
             description: '1718 14th St NW, Washington, DC',
             // one can customize markers by adding simplestyle properties
             // https://www.mapbox.com/guides/an-open-platform/#simplestyle
@@ -2104,6 +2127,14 @@ var map = L.mapbox.map('map', 'mapbox.streets').setView([42.346611,-83.040639], 
       [42.343473276929835, -83.0384912481531]
     ]
 
+    var intersection = [
+      [42.34661969570293, -83.0409144144505],
+      [42.34607652240508, -83.0409251432865],
+      [42.346068592833134, -83.0397288780659],
+      [42.34661969570293, -83.0397342424839],
+      [42.34661969570293, -83.0409144144505]
+    ]
+
     //Color Options
     var polyline_options_run = {
         color: '#d37'
@@ -2120,34 +2151,155 @@ var map = L.mapbox.map('map', 'mapbox.streets').setView([42.346611,-83.040639], 
         fillOpacity: 0.8
     };
 
+    var polyline_options_box = {
+        color: '#000'
+    };
+
     //Run Polylines
-    var polyline = L.polyline(run0, polyline_options_run).addTo(map);
-    var polyline = L.polyline(run1, polyline_options_run).addTo(map);
-    var polyline = L.polyline(run2, polyline_options_run).addTo(map);
-    var polyline = L.polyline(run3, polyline_options_run).addTo(map);
-    var polyline = L.polyline(run4, polyline_options_run).addTo(map);
-    var polyline = L.polyline(run5, polyline_options_run).addTo(map);
-    var polyline = L.polyline(run6, polyline_options_run).addTo(map);
-    var polyline = L.polyline(run7, polyline_options_run).addTo(map);
-    var polyline = L.polyline(run8, polyline_options_run).addTo(map);
-    var polyline = L.polyline(run9, polyline_options_run).addTo(map);
-    var polyline = L.polyline(run10, polyline_options_run).addTo(map);
+    var polyline0 = L.polyline(run0, polyline_options_run).addTo(map);
+    var polyline1 = L.polyline(run1, polyline_options_run).addTo(map);
+    var polyline2 = L.polyline(run2, polyline_options_run).addTo(map);
+    var polyline3 = L.polyline(run3, polyline_options_run).addTo(map);
+    var polyline4 = L.polyline(run4, polyline_options_run).addTo(map);
+    var polyline5 = L.polyline(run5, polyline_options_run).addTo(map);
+    var polyline6 = L.polyline(run6, polyline_options_run).addTo(map);
+    var polyline7 = L.polyline(run7, polyline_options_run).addTo(map);
+    var polyline8 = L.polyline(run8, polyline_options_run).addTo(map);
+    var polyline9 = L.polyline(run9, polyline_options_run).addTo(map);
+    var polyline10 = L.polyline(run10, polyline_options_run).addTo(map);
 
     //Walk Polylines
-    var polyline = L.polyline(walk0, polyline_options_walk).addTo(map);
-    var polyline = L.polyline(walk1, polyline_options_walk).addTo(map);
-    var polyline = L.polyline(walk2, polyline_options_walk).addTo(map);
-    var polyline = L.polyline(walk3, polyline_options_walk).addTo(map);
+    var polyline11 = L.polyline(walk0, polyline_options_walk).addTo(map);
+    var polyline12 = L.polyline(walk1, polyline_options_walk).addTo(map);
+    var polyline13 = L.polyline(walk2, polyline_options_walk).addTo(map);
+    var polyline14 = L.polyline(walk3, polyline_options_walk).addTo(map);
 
+/*
     //Building Polylines
-    var polyline = L.polyline(shed2, polyline_options_building_fill).addTo(map);
-    var polyline = L.polyline(shed2_stores, polyline_options_building_fill).addTo(map);
-    var polyline = L.polyline(shed3, polyline_options_building_fill).addTo(map);
-    var polyline = L.polyline(shed4, polyline_options_building_fill).addTo(map);
-    var polyline = L.polyline(shed5, polyline_options_building_fill).addTo(map);
-    var polyline = L.polyline(stores0, polyline_options_building_fill).addTo(map);
-    var polyline = L.polyline(stores1, polyline_options_building_fill).addTo(map);
-    var polyline = L.polyline(stores2, polyline_options_building_fill).addTo(map);
-    var polyline = L.polyline(stores3, polyline_options_building_fill).addTo(map);
-    var polyline = L.polyline(stores4, polyline_options_building_fill).addTo(map);
-    var polyline = L.polyline(stores5, polyline_options_building_fill).addTo(map);
+    var polyline15 = L.polyline(shed2, polyline_options_building_fill).addTo(map);
+    var polyline16 = L.polyline(shed2_stores, polyline_options_building_fill).addTo(map);
+    var polyline17 = L.polyline(shed3, polyline_options_building_fill).addTo(map);
+    var polyline18 = L.polyline(shed4, polyline_options_building_fill).addTo(map);
+    var polyline19 = L.polyline(shed5, polyline_options_building_fill).addTo(map);
+    var polyline20 = L.polyline(stores0, polyline_options_building_fill).addTo(map);
+    var polyline21 = L.polyline(stores1, polyline_options_building_fill).addTo(map);
+    var polyline22 = L.polyline(stores2, polyline_options_building_fill).addTo(map);
+    var polyline23 = L.polyline(stores3, polyline_options_building_fill).addTo(map);
+    var polyline24 = L.polyline(stores4, polyline_options_building_fill).addTo(map);
+    var polyline25 = L.polyline(stores5, polyline_options_building_fill).addTo(map);
+*/
+
+    var poly_intersection = L.polyline(intersection, polyline_options_box);
+
+//Walk Toggle
+var walkState = 0;
+function toggleWalk() {
+  if (walkState % 2 === 0) {
+    map.removeLayer(polyline11);
+    map.removeLayer(polyline12);
+    map.removeLayer(polyline13);
+    map.removeLayer(polyline14);
+    walkState += 1;
+    return
+  }
+
+  if (walkState % 2 === 1) {
+    map.addLayer(polyline11);
+    map.addLayer(polyline12);
+    map.addLayer(polyline13);
+    map.addLayer(polyline14);
+    walkState += 1;
+    return
+  }
+};
+
+var el = document.getElementById("walkData");
+el.addEventListener("click", toggleWalk);
+
+//Run Toggle
+var runState = 0;
+function toggleRun() {
+  if (runState % 2 === 0) {
+    map.removeLayer(polyline0);
+    map.removeLayer(polyline1);
+    map.removeLayer(polyline2);
+    map.removeLayer(polyline3);
+    map.removeLayer(polyline4);
+    map.removeLayer(polyline5);
+    map.removeLayer(polyline6);
+    map.removeLayer(polyline7);
+    map.removeLayer(polyline8);
+    map.removeLayer(polyline9);
+    map.removeLayer(polyline10);
+    runState += 1;
+    return
+  }
+
+  if (runState % 2 === 1) {
+    map.addLayer(polyline0);
+    map.addLayer(polyline1);
+    map.addLayer(polyline2);
+    map.addLayer(polyline3);
+    map.addLayer(polyline4);
+    map.addLayer(polyline5);
+    map.addLayer(polyline6);
+    map.addLayer(polyline7);
+    map.addLayer(polyline8);
+    map.addLayer(polyline9);
+    map.addLayer(polyline10);
+    runState += 1;
+    return
+  }
+};
+
+var el = document.getElementById("runData");
+el.addEventListener("click", toggleRun);
+
+//Marker Toggle
+var markerState = 0;
+function toggleMarker() {
+  if (markerState % 2 === 0) {
+    map.removeLayer(marker0);
+    map.removeLayer(marker1);
+    markerState += 1;
+    return
+  }
+
+  if (markerState % 2 === 1) {
+    map.addLayer(marker0);
+    map.addLayer(marker1);
+    markerState += 1;
+    return
+  }
+};
+
+var el = document.getElementById("markerData");
+el.addEventListener("click", toggleMarker);
+
+
+
+//Intersection Zoom
+function goTo() {
+  map.setView(new L.LatLng(42.34632233863949, -83.04036187939346),25);
+  map.addLayer(poly_intersection);
+  map.removeLayer(polyline11);
+  map.removeLayer(polyline12);
+  map.removeLayer(polyline13);
+  map.removeLayer(polyline14);
+  map.removeLayer(polyline0);
+  map.removeLayer(polyline1);
+  map.removeLayer(polyline2);
+  map.removeLayer(polyline3);
+  map.removeLayer(polyline4);
+  map.removeLayer(polyline5);
+  map.removeLayer(polyline6);
+  map.removeLayer(polyline7);
+  map.removeLayer(polyline8);
+  map.removeLayer(polyline9);
+  map.removeLayer(polyline10);
+};
+
+var el = document.getElementById("zoomTo");
+el.addEventListener("click", goTo);
+
+//
