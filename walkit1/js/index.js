@@ -2282,21 +2282,7 @@ el.addEventListener("click", toggleMarker);
 function goTo() {
   map.setView(new L.LatLng(42.34632233863949, -83.04036187939346),25);
   map.addLayer(poly_intersection);
-  map.removeLayer(polyline11);
-  map.removeLayer(polyline12);
-  map.removeLayer(polyline13);
-  map.removeLayer(polyline14);
-  map.removeLayer(polyline0);
-  map.removeLayer(polyline1);
-  map.removeLayer(polyline2);
-  map.removeLayer(polyline3);
-  map.removeLayer(polyline4);
-  map.removeLayer(polyline5);
-  map.removeLayer(polyline6);
-  map.removeLayer(polyline7);
-  map.removeLayer(polyline8);
-  map.removeLayer(polyline9);
-  map.removeLayer(polyline10);
+  
 };
 
 var el = document.getElementById("zoomTo");
