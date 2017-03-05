@@ -21,8 +21,8 @@ var map = L.mapbox.map('map', 'mapbox.streets').setView([42.346611,-83.040639], 
             // one can customize markers by adding simplestyle properties
             // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
-            'marker-color': '#BE9A6B',
-            'marker-symbol': 'cafe'
+            'marker-color': '#eb711e',
+            'marker-symbol': 'walk'
         }
     }).addTo(map);
 
@@ -44,8 +44,8 @@ var map = L.mapbox.map('map', 'mapbox.streets').setView([42.346611,-83.040639], 
             // one can customize markers by adding simplestyle properties
             // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
-            'marker-color': '#BE9A6B',
-            'marker-symbol': 'cafe'
+            'marker-color': '#eb711e',
+            'marker-symbol': 'walk'
         }
     }).addTo(map);
 
@@ -2282,7 +2282,7 @@ el.addEventListener("click", toggleMarker);
 function goTo() {
   map.setView(new L.LatLng(42.34632233863949, -83.04036187939346),25);
   map.addLayer(poly_intersection);
-  
+
 };
 
 var el = document.getElementById("zoomTo");
