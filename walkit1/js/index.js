@@ -2042,6 +2042,68 @@ var map = L.mapbox.map('map', 'mapbox.streets').setView([42.346611,-83.040639], 
       [42.34656982654358, -83.040409027598]
     ]
 
+    //Shed 2 West Stores
+    var shed2_stores = [
+      [42.34691277688222, -83.0394890299066],
+      [42.346373570883834, -83.0391322961077],
+      [42.34655396752311, -83.0386414518579],
+      [42.34710903085861, -83.0389740457758],
+      [42.34691277688222, -83.0394890299066]
+    ]
+
+    //Stores ON the Other Side of the Street
+    var stores0 = [
+      [42.34583832506138, -83.0403285613283],
+      [42.34536651200189, -83.0399932852014],
+      [42.3449343439915, -83.0411788215860],
+      [42.345443826149165, -83.041489957831],
+      [42.34583832506138, -83.0403285613283]
+    ]
+
+    var stores1 = [
+      [42.3462129976156, -83.0405458202585],
+      [42.34600088168189, -83.0403822055086],
+      [42.34555484116874, -83.0415891995653],
+      [42.34580264184454, -83.0417581787332],
+      [42.3462129976156, -83.0405458202585]
+    ]
+
+    var stores2 = [
+      [42.34634581750877, -83.0406155576929],
+      [42.346873129539865, -83.0409615626558],
+      [42.3464290775972, -83.0422329297289],
+      [42.345903744239685, -83.0418466916307],
+      [42.34634581750877, -83.0406289687380]
+    ]
+
+    var stores3 = [
+      [42.347369029264534, -83.0428563337773],
+      [42.347793251183504, -83.0416064243763],
+      [42.34700427541904, -83.0410807114094],
+      [42.34658401292958, -83.0422877054661],
+      [42.347369029264534, -83.0428563337773]
+    ]
+
+    var stores4 = [
+      [42.34387206289196, -83.038731096312],
+      [42.34503773996274, -83.0378137808293],
+      [42.345216158015305, -83.0379264336079],
+      [42.34472848080547, -83.0392782669514],
+      [42.34387206289196, -83.038731096312]
+    ]
+
+    var stores5 = [
+      [42.343473276929835, -83.0384912481531],
+      [42.343403890268256, -83.0384617438539],
+      [42.34345543465273, -83.0382820358499],
+      [42.344141057680226, -83.0378329753875],
+      [42.34427617415827, -83.037402271293],
+      [42.344363401881644, -83.0371930589899],
+      [42.34478962651672, -83.0374854197725],
+      [42.344157227067726, -83.0380057683214],
+      [42.343473276929835, -83.0384912481531]
+    ]
+
     //Color Options
     var polyline_options_run = {
         color: '#d37'
@@ -2079,12 +2141,13 @@ var map = L.mapbox.map('map', 'mapbox.streets').setView([42.346611,-83.040639], 
 
     //Building Polylines
     var polyline = L.polyline(shed2, polyline_options_building_fill).addTo(map);
+    var polyline = L.polyline(shed2_stores, polyline_options_building_fill).addTo(map);
     var polyline = L.polyline(shed3, polyline_options_building_fill).addTo(map);
     var polyline = L.polyline(shed4, polyline_options_building_fill).addTo(map);
     var polyline = L.polyline(shed5, polyline_options_building_fill).addTo(map);
-
-/*
-    fill: true,
-    fillColor: '#23f'
-
-    */
+    var polyline = L.polyline(stores0, polyline_options_building_fill).addTo(map);
+    var polyline = L.polyline(stores1, polyline_options_building_fill).addTo(map);
+    var polyline = L.polyline(stores2, polyline_options_building_fill).addTo(map);
+    var polyline = L.polyline(stores3, polyline_options_building_fill).addTo(map);
+    var polyline = L.polyline(stores4, polyline_options_building_fill).addTo(map);
+    var polyline = L.polyline(stores5, polyline_options_building_fill).addTo(map);
